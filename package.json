@@ -1,0 +1,26 @@
+{ "name": "expect-methods",
+  "version": "1.0.0",
+  "description": "Assert that some object carries all the methods you expect.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/expect-methods-js/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/expect-methods-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/expect-methods-js/issues"
+  },
+
+  "private": false, "license": "ISC",
+
+  "main": "em.js",
+  "scripts": { "test": "nodejs test.js" },
+
+  "dependencies": {},
+  "devDependencies": {},
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
