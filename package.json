@@ -1,5 +1,5 @@
 { "name": "expect-methods",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Assert that some object carries all the methods you expect.",
   "keywords": [],
 

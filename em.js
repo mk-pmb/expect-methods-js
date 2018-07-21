@@ -3,16 +3,18 @@
 'use strict';
 
 function expectMethods(obj, mtdNames, opt) {
-  var lup = ((obj === undefined) || (obj === null) || obj);
   if (!opt) { opt = false; }
-  mtdNames.forEach(function (name) {
-    if (typeof lup[name] === 'function') { return; }
-    var err = new Error('Expected a method "' + name + '" on '
+  function miss(mtd) {
+    var err = new Error('Expected a method "' + mtd + '" on '
       + String(opt.descr || obj));
     err.name = 'MissingExpectedMethod';
-    err.mtd = name;
+    err.mtd = mtd;
     err.obj = obj;
     throw err;
+  }
+  if ((obj === undefined) || (obj === null)) { miss(mtdNames[0]); }
+  mtdNames.forEach(function chk(mtd) {
+    if (typeof obj[mtd] !== 'function') { miss(mtd); }
   });
   return true;
 }

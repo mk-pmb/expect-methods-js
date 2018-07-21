@@ -17,6 +17,13 @@ t(JSON, ['parse', 'stringify']);
 t(JSON, ['parse', 'stringify', 'fromFile', 'saveFile'], null,
   /Expected a method "fromFile"/i);
 
+t(JSON, ['toString']);
+t(0, ['toString']);
+t(1, ['toString']);
+t(true, ['toString']);
+t(false, ['toString']);
+t('hello', ['toString']);
+t(null, ['toString'], null, /Expected a method "toString"/i);
 
 
 
